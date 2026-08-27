@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: notificacao
   mail:
     host: smtp.gmail.com
     port: 587
@@ -15,13 +17,16 @@ spring:
           timeout: 3000
           writetimeout: 5000
   thymeleaf:
-    enable: true
+    enabled: true
 
 envio:
   email:
-    remetente:
-    nomeRemetente: "eliton testes"
-
+    remetente: eliton.albinotestes@gmail.com
+    nomeRemetente: Sistema Agendador - Eliton
 
 server:
   port: 8082
+
+logging:
+  level:
+    com.javanauta.notificacao: INFO
