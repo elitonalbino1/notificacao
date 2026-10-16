@@ -31,10 +31,6 @@ public class GlobalExceptionHandler {
         return error;
     }
 
-    private Map<String, Object> buildError(String message, HttpStatus status) {
-        return buildError(message, status, null);
-    }
-
     // ✅ Erro de autenticação do Gmail (username/password errados)
     @ExceptionHandler(MailAuthenticationException.class)
     public ResponseEntity<Map<String, Object>> handleMailAuthentication(
